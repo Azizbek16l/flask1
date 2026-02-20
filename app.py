@@ -8,7 +8,7 @@ def home():
     return render_template("add.html")
 
 
-@app.route("/add",methods=["POST","GET"])
+@app.route("/add", methods=["POST", "GET"])
 def adder():
     a = request.form.get("a", "")
     b = request.form.get("b", "")
@@ -18,7 +18,6 @@ def adder():
 
     result = a + b
     return render_template("result.html", result=result)
-
 
 
 if __name__ == "__main__":
